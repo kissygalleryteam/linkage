@@ -1,0 +1,14 @@
+{
+    "name": "linkage",
+    "version": "1.0",
+    "desc": "元素联动关系处理组件",
+    "cover": "",
+    "tag":"",
+    "author": {
+        "name": "明河",
+        "email": "minghe12@126.com",
+        "page": ""
+    },
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
