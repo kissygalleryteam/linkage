@@ -7,7 +7,7 @@ Linkage是元素联动关系处理组件，特别适合像调查问卷类的联�
 
 ## 快速使用
 
-一个简单的联动地区选择，看![demo](../demo/simple.html)
+一个简单的联动地区选择，看[demo](../demo/simple.html)
 
 ### HTML
 
