@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Linkage的简单demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/??css/dpl/base-min.css,css/dpl/forms-min.css,button/assets/dpl-min.css">
+    <style type="text/css">
+        .controls div{
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Linkage的简单demo</h2>
+<p>实现地区级联选择的效果</p>
+<form class="form-vertical linkage-form" id="J_LinkageForm">
+    <div class="control-group">
+        <div class="controls">
+            <div>
+                <select name="" id="province">
+                    <option value="">省份</option>
+                    <option value="">浙江</option>
+                </select>
+            </div>
+            <div class="J_Linkage" condition="#province">
+                <select name="" id="city">
+                    <option value="">城市</option>
+                    <option value="">杭州</option>
+                </select>
+            </div>
+            <div class="J_Linkage" condition="#city">
+                <select name="" id="area">
+                    <option value="">地区</option>
+                    <option value="">西湖区</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages: [
+                {
+                    name: "kg",
+                    path: srcPath,
+                    charset: "utf-8",
+                    ignorePackageNameInUri: true
+                }
+            ]
+        });
+    }
+
+    S.use('kg/Linkage/2.0.0/index,kg/Linkage/2.0.0/theme/default.css', function (S, Linkage) {
+            var linkage = new Linkage('#J_LinkageForm');
+            linkage.render();
+    })
+</script>
+</body>
+</html>
